@@ -1,9 +1,10 @@
 package com.ondevop.dictionaryapp.feature_dictionary.data.remote.dto
 
+import com.ondevop.dictionaryapp.feature_dictionary.data.local.entity.WordInfoEntity
 import com.ondevop.dictionaryapp.feature_dictionary.domain.model.WordInfo
 
 data class WordInfoDto(
-    val license: License,
+    val license: LicenseDto,
     val meanings: List<MeaningDto>,
     val phonetic: String,
     val phonetics: List<PhoneticDto>,
@@ -12,9 +13,9 @@ data class WordInfoDto(
 )
 
 
-fun WordInfoDto.toWordInfo() : WordInfo{
-    return WordInfo(
-        license =license,
+fun WordInfoDto.toWordInfoEntity() : WordInfoEntity{
+    return WordInfoEntity(
+        license = license.name,
         meanings = meanings.map { it.toMeaning() },
         phonetic = phonetic,
         word =word

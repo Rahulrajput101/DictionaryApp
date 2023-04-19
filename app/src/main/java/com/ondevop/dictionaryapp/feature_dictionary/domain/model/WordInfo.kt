@@ -1,10 +1,9 @@
 package com.ondevop.dictionaryapp.feature_dictionary.domain.model
 
-import com.ondevop.dictionaryapp.feature_dictionary.data.remote.dto.License
-import com.ondevop.dictionaryapp.feature_dictionary.data.remote.dto.MeaningDto
+import com.ondevop.dictionaryapp.feature_dictionary.data.remote.dto.LicenseDto
 
 data class WordInfo(
-    val license: License,
+    val license: String,
     val meanings: List<Meaning>,
     val phonetic: String,
     val word: String

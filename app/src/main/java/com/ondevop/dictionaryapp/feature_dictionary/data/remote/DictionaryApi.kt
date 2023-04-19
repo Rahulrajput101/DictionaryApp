@@ -11,7 +11,7 @@ interface DictionaryApi {
     @GET("/api/v2/entries/en/{word}")
     fun getWordInfo(
         @Path("word") word : String
-    ) : WordInfoDto
+    ) : List<WordInfoDto>
 
 
 
